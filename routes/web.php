@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::group(['middleware' => ['auth']], function(){
+    //CRUD Kategori
+    //create data
+    Route::get('/kategori/create', 'KategoriController@create');
+});
+
+Auth::routes();
