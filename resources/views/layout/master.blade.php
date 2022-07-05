@@ -70,7 +70,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
-    <strong><a href="#">Tugas Akhir JCC</a></strong>
+    <strong><a href="#">An-Nuur Padang</a></strong>
   </footer>
 
   <!-- Control Sidebar -->

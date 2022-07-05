@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
       <img src="{{asset('layout/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Aplikasi Gudang</span>
+      <span class="brand-text font-weight-light">Aplikasi Santri</span>
     </a>
 
     <!-- Sidebar -->
@@ -52,30 +52,21 @@
 
           @auth
           <li class="nav-item">
-            <a href="/departemen" class="nav-link">
+            <a href="/putra" class="nav-link">
               <i class="nav-icon fas fa-building"></i>
               <p>
-                Departemen
+                Santri Putra
               </p>
             </a>
           </li>
             <li class="nav-item">
-              <a href="/kategori" class="nav-link">
+              <a href="/putri" class="nav-link">
                 <p>
                   <i class="nav-icon fas fa-book"></i>
-                  Kategori
+                  Santri Putri
                 </p>
               </a>
-            </li>
-            <li class="nav-item">
-              <a href="/barang" class="nav-link">
-                <i class="nav-icon fas fa-boxes"></i>
-                <p>
-                  Barang
-                </p>
-              </a>
-            </li>
-            
+            </li>          
           @endauth
           @guest
           <li class="nav-item bg-primary">
