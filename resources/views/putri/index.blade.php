@@ -7,6 +7,11 @@
   <a href="/putri/create" class="btn btn-success my-3">Tambah Santri</a>
 
   <table class="table">
+    <p>Cari Data Santri :</p>
+      <form action="/putri">
+        <input type="text" name="search" placeholder="Cari Santri .." value="{{request('search')}}">
+        <input type="submit" value="CARI">
+      </form>
     <thead class="thead-dark" align="center">
       <tr>
         <th scope="col">No</th>
@@ -19,7 +24,7 @@
       </tr>
     </thead>
     <tbody align="center">
-        @forelse ($putri as $key => $item)
+        @foreach ($putri as $key => $item)
             <tr>
                 <td>{{$key + 1}}</td>
                 <td>{{$item->nama_santri}}</td>
@@ -37,9 +42,7 @@
                     </form>
                 </td>
             </tr>
-        @empty
-            <h1>Data Kosong</h1>
-        @endforelse
+        @endforeach
     </tbody>
   </table>
 @endsection

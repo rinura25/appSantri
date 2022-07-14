@@ -9,10 +9,11 @@ use DB;
 class PutriController extends Controller
 {
     public function index(){
-        $putri = DB::table('putri')->get();
- 
-        return view('putri.index', ['putri' => $putri]);
-    }
+            $putri = DB::table('putri')->get();
+     
+            return view('putri.index', ['putri' => $putri]);
+        }
+    
 
     public function create(){
         return view('putri.create');
@@ -26,7 +27,7 @@ class PutriController extends Controller
                 'ttl' => 'required',
                 'alamat' => 'required',
                 'tahun_ajaran' => 'required',
-                'kk' => 'required'
+                'kk' => 'image|file'
             ],
             
             [
@@ -49,7 +50,12 @@ class PutriController extends Controller
                 'kk' => $request['kk']
             ]
         );
-
+    
+        if($request->file('kk')){
+            $request->file('kk')->store('post-images');
+        }
+        
+        
         return redirect('/putri');
     }
 
@@ -103,4 +109,6 @@ class PutriController extends Controller
         DB::table('putri')->where('id', '=', $id)->delete();
         return redirect('/putri');
     }
+
+    
 }

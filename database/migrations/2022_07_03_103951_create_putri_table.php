@@ -20,7 +20,7 @@ class CreatePutriTable extends Migration
             $table->date('ttl');
             $table->text('alamat');
             $table->string('tahun_ajaran');
-            $table->string('kk');
+            $table->string('kk')->nullable();
             $table->timestamps();
         });
     }
