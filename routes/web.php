@@ -52,7 +52,6 @@ Route::group(['middleware' => ['auth']], function(){
     Route::put('/putri/{putri_id}', 'App\Http\Controllers\PutriController@update');
     //menghapus data
     Route::delete('/putri/{putri_id}', 'App\Http\Controllers\PutriController@destroy');
-    Route::get('/putri/cari','PutriController@search');
 
 
     //CRUD Barang

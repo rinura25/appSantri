@@ -7,10 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Putri extends Model
 {
-
-    use HasFactory;
     protected $table = "putri";
-    protected $fillable = ["nama_santri","nama_orang_tua","ttl","alamat","tahun_ajaran","kk"];
-
-
+    protected $fillable = ["nama_santri","nama_orang_tua","ttl","alamat","tahun_ajaran"];
 }

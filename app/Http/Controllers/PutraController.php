@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Putra;
 use DB;
 
 class PutraController extends Controller
 {
-    public function index(){
-        $putra = DB::table('putra')->get();
- 
-        return view('putra.index', ['putra' => $putra]);
+    public function index(Request $request){
+        if($request->has('search')){
+            $putra = Putra::where('nama_santri','LIKE', '%' .$request->search.'%')->paginate(20);
+        }else{
+        $putra = Putra::paginate(20);
+        }
+        return view('putra.index', compact('putra'));
     }
 
     public function create(){

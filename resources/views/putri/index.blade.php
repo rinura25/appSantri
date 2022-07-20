@@ -1,17 +1,20 @@
+
 @extends('layout.master')
 @section('judul')
     List Santri Putri
 @endsection
 @section('content')
-
+<div class="mb-3 text-center">
+  <div class="col-md-6">
+    <form action="/putri" method="GET">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search. . . " name="search">
+        <button class="btn btn-danger" type="submit">search</button>
+      </div>
+    </form>
+  </div>
   <a href="/putri/create" class="btn btn-success my-3">Tambah Santri</a>
-
   <table class="table">
-    <p>Cari Data Santri :</p>
-      <form action="/putri">
-        <input type="text" name="search" placeholder="Cari Santri .." value="{{request('search')}}">
-        <input type="submit" value="CARI">
-      </form>
     <thead class="thead-dark" align="center">
       <tr>
         <th scope="col">No</th>

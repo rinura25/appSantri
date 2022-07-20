@@ -4,8 +4,16 @@
 @endsection
 @section('content')
 
-  <a href="/putra/create" class="btn btn-success my-3">Tambah Santri</a>
+<div class="col-md-6">
+  <form action="/putra" method="GET">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search. . . " name="search">
+      <button class="btn btn-danger" type="submit">search</button>
+    </div>
+  </form>
+</div>
 
+  <a href="/putra/create" class="btn btn-success my-3">Tambah Santri</a>
   <table class="table">
     <thead class="thead-dark" align="center">
       <tr>

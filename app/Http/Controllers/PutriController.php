@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Putri;
+use App\Models\Putri;
 use DB;
 
 class PutriController extends Controller
 {
-    public function index(){
-            $putri = DB::table('putri')->get();
-     
-            return view('putri.index', ['putri' => $putri]);
+
+    public function index(Request $request){
+
+        if($request->has('search')){
+            $putri = Putri::where('nama_santri','LIKE', '%' .$request->search.'%')->paginate(20);
+        }else{
+        $putri = Putri::paginate(20);
         }
-    
+        return view('putri.index', compact('putri'));
+    }
 
     public function create(){
         return view('putri.create');
