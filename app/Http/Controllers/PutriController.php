@@ -30,8 +30,7 @@ class PutriController extends Controller
                 'nama_orang_tua' => 'required',
                 'ttl' => 'required',
                 'alamat' => 'required',
-                'tahun_ajaran' => 'required',
-                'kk' => 'image|file'
+                'tahun_ajaran' => 'required'
             ],
             
             [
@@ -40,7 +39,6 @@ class PutriController extends Controller
                 'ttl.required' => 'Tanggal Lahir Harus Diisi',
                 'alamat.required' => 'Alamat Harus Diisi',
                 'tahun_ajaran.required' => 'Tahun Ajaran Harus Diisi',
-                'kk.required' => 'KK Harus Diisi'
             ]
         );
 
@@ -50,15 +48,18 @@ class PutriController extends Controller
                 'nama_orang_tua' => $request['nama_orang_tua'],
                 'alamat' => $request['alamat'],
                 'ttl' => $request['ttl'],
-                'tahun_ajaran' => $request['tahun_ajaran'],
-                'kk' => $request['kk']
+                'tahun_ajaran' => $request['tahun_ajaran']
             ]
         );
-    
-        if($request->file('kk')){
-            $request->file('kk')->store('post-images');
-        }
+       // $kk= new Putri();
+        //if($request->file('kk')){
+        //    $file= $request->file('kk');
+        //    $filename= $file->getClientOriginalName();
+        //    $file-> move(public_path('public/Image'), $filename);
+        //    $kk['kk']= $filename;
         
+       // }
+      //  $kk->save();
         
         return redirect('/putri');
     }

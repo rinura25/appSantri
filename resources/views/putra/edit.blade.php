@@ -50,8 +50,6 @@
       <label>Foto KK</label>
       <input type="file" value="{{$putra->kk}}"class="form-control" name="kk" autofocus>
     </div>
-    @error('kk')
-    <div class="alert alert-danger">{{$message}}</div>
-    @enderror
+
     <button type="submit" class="btn btn-primary">Submit</button>
 @endsection

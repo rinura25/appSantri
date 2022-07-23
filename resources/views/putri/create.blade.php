@@ -48,12 +48,6 @@
         @error('tahun_ajaran')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <div class="form-group">
-            <label>Foto KK</label>
-            <input type="file" class="form-control" name="kk" autofocus value="{{ old('kk') }}">
-        </div>
-
-        @error('kk')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
         <button type="submit" class="btn btn-primary">Submit</button>

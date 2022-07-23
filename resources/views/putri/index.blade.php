@@ -47,5 +47,7 @@
             </tr>
         @endforeach
     </tbody>
+    
   </table>
+  {{$putri->links()}}
 @endsection

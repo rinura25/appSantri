@@ -28,10 +28,6 @@
                     <label>Tahun Ajaran</label>
                     <input type="text" class="form-control" name="nama_santri" value="{{$putri->tahun_ajaran}}" readonly>
                 </div>
-                <div class="form-group">
-                    <label>Foto KK</label>
-                    <img src={{$putri->kk}}>
-                </div>
                 <a href="/putri" class="btn btn-primary">Kembali</a>
             </div>
         </div>
