@@ -29,7 +29,6 @@ class PutraController extends Controller
                 'ttl' => 'required',
                 'alamat' => 'required',
                 'tahun_ajaran' => 'required',
-                'kk' => 'required'
             ],
             [
                 'nama_santri.required' => 'Nama Santri Harus Diisi',
@@ -37,7 +36,6 @@ class PutraController extends Controller
                 'ttl.required' => 'Tanggal Lahir Harus Diisi',
                 'alamat.required' => 'Alamat Harus Diisi',
                 'tahun_ajaran.required' => 'Tahun Ajaran Harus Diisi',
-                'kk.required' => 'KK Harus Diisi'
             ]
         );
 
@@ -48,7 +46,6 @@ class PutraController extends Controller
                 'alamat' => $request['alamat'],
                 'ttl' => $request['ttl'],
                 'tahun_ajaran' => $request['tahun_ajaran'],
-                'kk' => $request['kk']
             ]
         );
 
@@ -74,7 +71,6 @@ class PutraController extends Controller
                 'ttl' => 'required',
                 'alamat' => 'required',
                 'tahun_ajaran' => 'required',
-                'kk' => 'required'
             ],
             [
                 'nama_santri.required' => 'Nama Santri Harus Diisi',
@@ -82,7 +78,6 @@ class PutraController extends Controller
                 'ttl.required' => 'Tanggal Lahir Harus Diisi',
                 'alamat.required' => 'Alamat Harus Diisi',
                 'tahun_ajaran.required' => 'Tahun Ajaran Harus Diisi',
-                'kk.required' => 'KK Harus Diisi'
             ]
         );
 
@@ -94,7 +89,6 @@ class PutraController extends Controller
                     'alamat' => $request['alamat'],
                     'ttl' => $request['ttl'],
                     'tahun_ajaran' => $request['tahun_ajaran'],
-                    'kk' => $request['kk']
                 ]
             );
         
